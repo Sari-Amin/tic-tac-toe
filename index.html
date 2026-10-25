@@ -42,7 +42,7 @@
                 <div class="x">X</div>
                 <div class="o">O</div>
             </div>
-            <div class="turn">
+            <div id="turn" class="turn x">
                 X TURN
             </div>
             <div class="restart-btn" >
@@ -54,34 +54,37 @@
             </div>
         </div>
         <div id="game-grid" class="grid-list hidden">
-            <div class="grid-item" data-id="1"></div>
-            <div class="grid-item" data-id="2"></div>
-            <div class="grid-item" data-id="3"></div>
-            <div class="grid-item" data-id="4"></div>
-            <div class="grid-item" data-id="5"></div>
-            <div class="grid-item" data-id="6"></div>
-            <div class="grid-item" data-id="7"></div>
-            <div class="grid-item" data-id="8"></div>
-            <div class="grid-item" data-id="9"></div>
+            <div id="0" class="grid-item" data-id="1"></div>
+            <div id="1" class="grid-item" data-id="2"></div>
+            <div id="2" class="grid-item" data-id="3"></div>
+            <div id="3" class="grid-item" data-id="4"></div>
+            <div id="4" class="grid-item" data-id="5"></div>
+            <div id="5" class="grid-item" data-id="6"></div>
+            <div id="6" class="grid-item" data-id="7"></div>
+            <div id="7" class="grid-item" data-id="8"></div>
+            <div id="8" class="grid-item" data-id="9"></div>
         </div>
         <div id="bottom" class="bottom hidden">
             <div class="xwin">
                 <div>X WINS</div>
-                <div style="font-weight: 600;">0</div>
+                <div id="xwin" style="font-weight: 600;">0</div>
             </div>
             <div class="ties">
                 <div>TIES</div>
-                <div style="font-weight: 600;">0</div>
+                <div id="tie" style="font-weight: 600;">0</div>
             </div>
             <div class="owin">
                 <div>O WINS</div>
-                <div style="font-weight: 600;">0</div>
+                <div id="owin" style="font-weight: 600;">0</div>
             </div>
+            <button id="quit" class="quit">
+                    <div class="quit">QUIT</div>
+            </button>
         </div>
         <!-- popup after game end -->
         <div  id = "popup-endgame" class = "popup hidden">
-            <div class="won">YOU WON!</div>
-            <div class="wonround"> X TAKES ROUND </div>
+            <div id="won" class="won">YOU WON!</div>
+            <div id="wonround" class="wonround"> X TAKES ROUND </div>
             <div class="round">
             <button id="quit" class="quit">
                 <div class="quit">QUIT</div>
