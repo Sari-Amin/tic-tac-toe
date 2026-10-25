@@ -1,0 +1,295 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(14, 14, 46);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container{
+    background-color: rgb(9, 9, 52);
+    height: 90vh;
+    width: max(30%, 600px);
+    border: 3px solid rgb(26, 16, 98);
+    border-radius: 8px;
+    margin: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    font-weight: 900;
+    font-size: xx-large;
+    font-stretch: narrower;
+}
+.x{
+    color: rgb(69, 157, 69);
+}
+
+.o{
+    color: rgb(185, 185, 6);
+}
+
+.newgame{
+
+    border: 3px solid rgb(26, 16, 98);
+    background-color: rgb(185, 185, 6);
+    color: rgb(3, 3, 3);
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 560;
+    padding: .8em;
+    border-radius: 12px;
+    line-height: 12px;
+    display: block;
+    margin: 0 auto;
+}
+.tictactoe{
+    color: rgb(247, 253, 247);
+    font-weight: 900;
+    font-size: xx-large;
+    margin: 25px;
+}
+.pick{
+    color: rgb(218, 221, 218);
+    font-weight: 600;
+    font-size: large;
+}
+.remember{
+    color: rgb(184, 184, 185);
+    font-weight: 400;
+    font-size: medium;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.popup{
+    background-color: rgb(28, 28, 120);
+    height: 20vh;
+    width: max(27%, 400px);
+    border: 3px solid rgb(40, 29, 118);
+    border-radius: 15px;
+    margin: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+
+}
+.logo button{
+
+    font-weight: 900;
+    padding: .5em;
+    border-radius: 12px;
+    line-height: 12px;
+    width: 15vh;
+    font-size: xx-large;
+    background: transparent;
+    background-color: transparent;
+    border: none;
+    
+}
+
+button.x {
+  background-color: #150d4c;
+}
+
+button.x .x {
+  color: #9c9fdc;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+button.o {
+  background-color:  #9c9fdc;
+}
+
+button.o .o {
+  color:  #150d4c;
+  font-size: 2rem;
+  font-weight: 900;
+}
+.popup > .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.popup .won{
+    font-weight: 500;
+    color: #cececf;
+}
+
+.popup .wonround{
+   
+    font-weight: 900;
+    font-size: x-large;
+}
+
+
+/* after round*/
+
+.round button{
+
+    font-weight: 900;
+    padding: .5em;
+    border-radius: 12px;
+    line-height: 12px;
+    /* width: 15vh; */
+    font-size: xx-large;
+    background: transparent;
+    background-color: transparent;
+    border: none;
+    color: #060606;
+    
+}
+
+.popup > .round{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+button.quit {
+  background-color: #a4a4a7;
+}
+
+button.quit .quit {
+
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+button.next {
+    background-color: rgb(185, 185, 6);
+
+    flex: 1;
+}
+
+button.next .next {
+  
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.top .restart-btn{
+    display: flex;
+    justify-content: end;
+}
+.top, .bottom{
+    display: grid;
+ 
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    width: 90%;
+}
+.top .turn{
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #130b69;
+    border-radius: 12px;
+    box-shadow: #060606;
+    padding: 12px;
+}
+
+
+.top .restart{
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(151, 151, 152);
+    box-shadow: #060606;
+    width: 30%;
+}
+
+.bottom .xwin{
+    background-color: rgb(69, 157, 69);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: #060606;
+    padding: 12px;
+    gap: 2px;
+}
+.bottom .ties{
+    background-color: rgb(144, 145, 144);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: #060606;
+    padding: 12px;
+    gap: 2px;
+}
+.bottom .owin{
+    background-color: rgb(185, 185, 6);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: #060606;
+    padding: 12px;
+    gap: 2px;
+}
+
+.grid-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  padding: 20px;
+  height: 53vh;
+  width: 100%;
+  margin-bottom: 30px;
+
+}
+    
+.grid-item{
+    background-color: #130b69;
+    border-radius: 12px;
+    box-shadow: #060606;
+    font-weight: 900;
+    font-size: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
+    padding: 0;
+    border: none;
+
+}
+
+.bottom{
+    margin-top: 30px;
+    width: 90%;
+}
+
+.draw{
+    color: #b5b5b6;
+}
+
+.bottom .quit{
+    border-radius: 12px;
+}
